@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20899CE185760DD00E57E80 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20899CD185760DD00E57E80 /* InfoViewController.m */; };
 		D27593BC18510A3E00B714E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BB18510A3E00B714E5 /* Foundation.framework */; };
 		D27593BE18510A3E00B714E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BD18510A3E00B714E5 /* CoreGraphics.framework */; };
 		D27593C018510A3E00B714E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BF18510A3E00B714E5 /* UIKit.framework */; };
 		D27593C618510A3E00B714E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D27593C418510A3E00B714E5 /* InfoPlist.strings */; };
 		D27593C818510A3E00B714E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593C718510A3E00B714E5 /* main.m */; };
-		D27593CC18510A3E00B714E5 /* priceGraphAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593CB18510A3E00B714E5 /* priceGraphAppDelegate.m */; };
+		D27593CC18510A3E00B714E5 /* PriceGraphAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593CB18510A3E00B714E5 /* PriceGraphAppDelegate.m */; };
 		D27593CF18510A3E00B714E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27593CD18510A3E00B714E5 /* Main.storyboard */; };
-		D27593D218510A3E00B714E5 /* priceGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593D118510A3E00B714E5 /* priceGraphViewController.m */; };
+		D27593D218510A3E00B714E5 /* PriceGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593D118510A3E00B714E5 /* PriceGraphViewController.m */; };
 		D27593D418510A3E00B714E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D27593D318510A3E00B714E5 /* Images.xcassets */; };
 		D27593DB18510A3E00B714E5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593DA18510A3E00B714E5 /* XCTest.framework */; };
 		D27593DC18510A3E00B714E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BB18510A3E00B714E5 /* Foundation.framework */; };
 		D27593DD18510A3E00B714E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BF18510A3E00B714E5 /* UIKit.framework */; };
 		D27593E518510A3E00B714E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D27593E318510A3E00B714E5 /* InfoPlist.strings */; };
 		D27593E718510A3E00B714E5 /* fybseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593E618510A3E00B714E5 /* fybseTests.m */; };
+		D27593F218510A7800B714E5 /* PricesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593F118510A7800B714E5 /* PricesModel.m */; };
+		D28882AB18578E710019A92A /* facebook_profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D28882AA18578E710019A92A /* facebook_profile_pic.jpg */; };
+		D2A07999185B3D3D0038EC71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A07998185B3D3D0038EC71 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20899CC185760DD00E57E80 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		D20899CD185760DD00E57E80 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		D27593B818510A3E00B714E5 /* fybse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fybse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27593BB18510A3E00B714E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D27593BD18510A3E00B714E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,17 +48,21 @@
 		D27593C518510A3E00B714E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D27593C718510A3E00B714E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D27593C918510A3E00B714E5 /* fybse-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fybse-Prefix.pch"; sourceTree = "<group>"; };
-		D27593CA18510A3E00B714E5 /* priceGraphAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = priceGraphAppDelegate.h; sourceTree = "<group>"; };
-		D27593CB18510A3E00B714E5 /* priceGraphAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = priceGraphAppDelegate.m; sourceTree = "<group>"; };
+		D27593CA18510A3E00B714E5 /* PriceGraphAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriceGraphAppDelegate.h; sourceTree = "<group>"; };
+		D27593CB18510A3E00B714E5 /* PriceGraphAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriceGraphAppDelegate.m; sourceTree = "<group>"; };
 		D27593CE18510A3E00B714E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D27593D018510A3E00B714E5 /* priceGraphViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = priceGraphViewController.h; sourceTree = "<group>"; };
-		D27593D118510A3E00B714E5 /* priceGraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = priceGraphViewController.m; sourceTree = "<group>"; };
+		D27593D018510A3E00B714E5 /* PriceGraphViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriceGraphViewController.h; sourceTree = "<group>"; };
+		D27593D118510A3E00B714E5 /* PriceGraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriceGraphViewController.m; sourceTree = "<group>"; };
 		D27593D318510A3E00B714E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D27593D918510A3E00B714E5 /* fybseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fybseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27593DA18510A3E00B714E5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D27593E218510A3E00B714E5 /* fybseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fybseTests-Info.plist"; sourceTree = "<group>"; };
 		D27593E418510A3E00B714E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D27593E618510A3E00B714E5 /* fybseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fybseTests.m; sourceTree = "<group>"; };
+		D27593F018510A7800B714E5 /* PricesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricesModel.h; sourceTree = "<group>"; };
+		D27593F118510A7800B714E5 /* PricesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricesModel.m; sourceTree = "<group>"; };
+		D28882AA18578E710019A92A /* facebook_profile_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facebook_profile_pic.jpg; sourceTree = "<group>"; };
+		D2A07998185B3D3D0038EC71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A07999185B3D3D0038EC71 /* QuartzCore.framework in Frameworks */,
 				D27593BE18510A3E00B714E5 /* CoreGraphics.framework in Frameworks */,
 				D27593C018510A3E00B714E5 /* UIKit.framework in Frameworks */,
 				D27593BC18510A3E00B714E5 /* Foundation.framework in Frameworks */,
@@ -101,6 +112,7 @@
 		D27593BA18510A3E00B714E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2A07998185B3D3D0038EC71 /* QuartzCore.framework */,
 				D27593BB18510A3E00B714E5 /* Foundation.framework */,
 				D27593BD18510A3E00B714E5 /* CoreGraphics.framework */,
 				D27593BF18510A3E00B714E5 /* UIKit.framework */,
@@ -112,11 +124,15 @@
 		D27593C118510A3E00B714E5 /* fybse */ = {
 			isa = PBXGroup;
 			children = (
-				D27593CA18510A3E00B714E5 /* priceGraphAppDelegate.h */,
-				D27593CB18510A3E00B714E5 /* priceGraphAppDelegate.m */,
+				D2A079A0185B41BD0038EC71 /* Resources */,
+				D27593F318510A8200B714E5 /* model */,
+				D27593CA18510A3E00B714E5 /* PriceGraphAppDelegate.h */,
+				D27593CB18510A3E00B714E5 /* PriceGraphAppDelegate.m */,
 				D27593CD18510A3E00B714E5 /* Main.storyboard */,
-				D27593D018510A3E00B714E5 /* priceGraphViewController.h */,
-				D27593D118510A3E00B714E5 /* priceGraphViewController.m */,
+				D20899CC185760DD00E57E80 /* InfoViewController.h */,
+				D20899CD185760DD00E57E80 /* InfoViewController.m */,
+				D27593D018510A3E00B714E5 /* PriceGraphViewController.h */,
+				D27593D118510A3E00B714E5 /* PriceGraphViewController.m */,
 				D27593D318510A3E00B714E5 /* Images.xcassets */,
 				D27593C218510A3E00B714E5 /* Supporting Files */,
 			);
@@ -150,6 +166,23 @@
 				D27593E318510A3E00B714E5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D27593F318510A8200B714E5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D27593F018510A7800B714E5 /* PricesModel.h */,
+				D27593F118510A7800B714E5 /* PricesModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D2A079A0185B41BD0038EC71 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D28882AA18578E710019A92A /* facebook_profile_pic.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D28882AB18578E710019A92A /* facebook_profile_pic.jpg in Resources */,
 				D27593D418510A3E00B714E5 /* Images.xcassets in Resources */,
 				D27593C618510A3E00B714E5 /* InfoPlist.strings in Resources */,
 				D27593CF18510A3E00B714E5 /* Main.storyboard in Resources */,
@@ -250,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D27593D218510A3E00B714E5 /* priceGraphViewController.m in Sources */,
+				D27593D218510A3E00B714E5 /* PriceGraphViewController.m in Sources */,
 				D27593C818510A3E00B714E5 /* main.m in Sources */,
-				D27593CC18510A3E00B714E5 /* priceGraphAppDelegate.m in Sources */,
+				D27593CC18510A3E00B714E5 /* PriceGraphAppDelegate.m in Sources */,
+				D20899CE185760DD00E57E80 /* InfoViewController.m in Sources */,
+				D27593F218510A7800B714E5 /* PricesModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,11 +413,16 @@
 		D27593EB18510A3E00B714E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybse/fybse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/petar/Develop/iOS/fybse/fybse/core\\ plot",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,11 +431,17 @@
 		D27593EC18510A3E00B714E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybse/fybse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/petar/Develop/iOS/fybse/fybse/core\\ plot",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,6 +464,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "fybseTests/fybseTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/petar/Develop/iOS/fybse/fybse/core\\ plot",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -436,6 +487,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybseTests/fybseTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/petar/Develop/iOS/fybse/fybse/core\\ plot",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -461,6 +516,7 @@
 				D27593EC18510A3E00B714E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D27593ED18510A3E00B714E5 /* Build configuration list for PBXNativeTarget "fybseTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +525,7 @@
 				D27593EF18510A3E00B714E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

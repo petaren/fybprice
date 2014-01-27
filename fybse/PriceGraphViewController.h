@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PricesModel.h"
 
-@interface priceGraphViewController : UIViewController
+@interface PriceGraphViewController : UIViewController <PricesModelDelegate>
+
+-(void)refreshData;
+-(void)stopUpdatingTimeSince;
 
 @end
