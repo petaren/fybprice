@@ -92,7 +92,7 @@ static NSString *const URL = @"http://petar.se:3000/prices";
     if ([response statusCode] != 200) {
         [connection cancel];
         self.requestData = nil;
-        NSLog(@"The connection was canceled because the status code was code 200");
+        NSLog(@"The connection was canceled because the status code was not code 200");
     }
 }
 

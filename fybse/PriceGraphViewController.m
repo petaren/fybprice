@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastUpdateLabel;
 @property (nonatomic, strong) NSTimer *timeSinceUpdateTimer;
 @property (weak, nonatomic) IBOutlet UIView *lineChartView;
+@property (weak, nonatomic) IBOutlet UILabel *krLabel;
 
 @end
 
@@ -27,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self hidePriceLabels];
 
     self.model = [[PricesModel alloc] init];
     self.model.delegate = self;
@@ -52,10 +54,24 @@
 
 -(void)showPriceLabels
 {
-    self.priceLabel.hidden = NO;
-    self.avgLabel.hidden = NO;
-    self.lowLabel.hidden = NO;
-    self.highLabel.hidden = NO;
+    [UIView animateWithDuration:0.4f animations:^{
+        self.priceLabel.alpha = 1;
+        self.avgLabel.alpha = 1;
+        self.lowLabel.alpha = 1;
+        self.highLabel.alpha = 1;
+        self.lastUpdateLabel.alpha = 1;
+        self.krLabel.alpha = 1;
+    }];
+}
+
+-(void)hidePriceLabels
+{
+    self.priceLabel.alpha = 0;
+    self.avgLabel.alpha = 0;
+    self.lowLabel.alpha = 0;
+    self.highLabel.alpha = 0;
+    self.lastUpdateLabel.alpha = 0;
+    self.krLabel.alpha = 0;
 }
 
 #pragma mark - PricesModelRequestDelegate
