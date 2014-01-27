@@ -50,6 +50,14 @@
     self.timeSinceUpdateTimer = nil;
 }
 
+-(void)showPriceLabels
+{
+    self.priceLabel.hidden = NO;
+    self.avgLabel.hidden = NO;
+    self.lowLabel.hidden = NO;
+    self.highLabel.hidden = NO;
+}
+
 #pragma mark - PricesModelRequestDelegate
 
 -(void)priceModelReceivedPrices:(NSMutableDictionary *)prices
@@ -60,6 +68,7 @@
     self.avgLabel.text = [(NSNumber*)self.prices[@"average"] stringValue];
     self.highLabel.text = [(NSNumber*)[self.prices valueForKeyPath:@"high.value"] stringValue];
     self.lowLabel.text = [(NSNumber*)[self.prices valueForKeyPath:@"low.value"] stringValue];
+    [self showPriceLabels];
 
 
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -88,10 +97,10 @@
     NSTimeInterval diff = abs([referenceDate timeIntervalSinceNow]);
     if (diff < 3600) {
         NSInteger minsDiff = diff/60;
-        self.lastUpdateLabel.text = [NSString stringWithFormat:@"%d minutes ago", minsDiff];
+        self.lastUpdateLabel.text = [NSString stringWithFormat:@"%ld minutes ago", (long)minsDiff];
     } else {
         NSInteger hoursDiff = diff/60/60;
-        self.lastUpdateLabel.text = [NSString stringWithFormat:@"%d hour ago", hoursDiff];
+        self.lastUpdateLabel.text = [NSString stringWithFormat:@"%ld hour ago", (long)hoursDiff];
     }
     NSLog(@"Updated time since to: %@", self.lastUpdateLabel.text);
 }
