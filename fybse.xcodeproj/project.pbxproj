@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D2AC45B45648838313F8D0 /* libPods-fybseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C395767086D646A19048CA49 /* libPods-fybseTests.a */; };
 		D20899CE185760DD00E57E80 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20899CD185760DD00E57E80 /* InfoViewController.m */; };
 		D27593BC18510A3E00B714E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BB18510A3E00B714E5 /* Foundation.framework */; };
 		D27593BE18510A3E00B714E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BD18510A3E00B714E5 /* CoreGraphics.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C395767086D646A19048CA49 /* libPods-fybseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fybseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA1CB107DAB4C11BC175239 /* Pods-fybseTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fybseTests.xcconfig"; path = "Pods/Pods-fybseTests.xcconfig"; sourceTree = "<group>"; };
 		D20899CC185760DD00E57E80 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		D20899CD185760DD00E57E80 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		D27593B818510A3E00B714E5 /* fybse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fybse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +90,7 @@
 				D27593DB18510A3E00B714E5 /* XCTest.framework in Frameworks */,
 				D27593DD18510A3E00B714E5 /* UIKit.framework in Frameworks */,
 				D27593DC18510A3E00B714E5 /* Foundation.framework in Frameworks */,
+				22D2AC45B45648838313F8D0 /* libPods-fybseTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +104,7 @@
 				D27593E018510A3E00B714E5 /* fybseTests */,
 				D27593BA18510A3E00B714E5 /* Frameworks */,
 				D27593B918510A3E00B714E5 /* Products */,
+				CBA1CB107DAB4C11BC175239 /* Pods-fybseTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +126,7 @@
 				D27593BD18510A3E00B714E5 /* CoreGraphics.framework */,
 				D27593BF18510A3E00B714E5 /* UIKit.framework */,
 				D27593DA18510A3E00B714E5 /* XCTest.framework */,
+				C395767086D646A19048CA49 /* libPods-fybseTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D27593ED18510A3E00B714E5 /* Build configuration list for PBXNativeTarget "fybseTests" */;
 			buildPhases = (
+				D678A1F0E80A408CA572E0AB /* Check Pods Manifest.lock */,
 				D27593D518510A3E00B714E5 /* Sources */,
 				D27593D618510A3E00B714E5 /* Frameworks */,
 				D27593D718510A3E00B714E5 /* Resources */,
+				28A9B1BC001C4639AC03D1F4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +296,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		28A9B1BC001C4639AC03D1F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-fybseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D2BCB43218980ABB001454D9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +323,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run 214d389f61b37ab7b33987b206e5d938ae031ee1";
+		};
+		D678A1F0E80A408CA572E0AB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -483,6 +521,7 @@
 		};
 		D27593EE18510A3E00B714E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA1CB107DAB4C11BC175239 /* Pods-fybseTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fybse.app/fybse";
@@ -498,10 +537,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "fybseTests/fybseTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/petar/Develop/iOS/fybse/fybse/core\\ plot",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -510,6 +546,7 @@
 		};
 		D27593EF18510A3E00B714E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA1CB107DAB4C11BC175239 /* Pods-fybseTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fybse.app/fybse";
@@ -521,10 +558,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybseTests/fybseTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/petar/Develop/iOS/fybse/fybse/core\\ plot",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
