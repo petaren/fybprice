@@ -15,6 +15,10 @@
 {
     // Override point for customization after application launch.
     NSLog(@"%s", __PRETTY_FUNCTION__);
+
+    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:100 * 1024 diskCapacity:100 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:cache];
+
     return YES;
 }
 							

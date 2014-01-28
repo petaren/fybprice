@@ -11,6 +11,7 @@
 @protocol PricesModelDelegate <NSObject>
 
 -(void)priceModelReceivedPrices:(NSMutableDictionary*)prices;
+-(void)priceModelFailedWithErrorString:(NSString*)errorString;
 
 @end
 

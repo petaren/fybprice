@@ -103,6 +103,16 @@
     [self.timeSinceUpdateTimer setTolerance:10];
 }
 
+-(void)priceModelFailedWithErrorString:(NSString *)errorString
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:errorString
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Dismiss"
+                                              otherButtonTitles:nil, nil];
+    [alertView show];
+}
+
 -(void)timerFired:(NSTimer*)timer
 {
     [self updateTimeSinceWithDate:[timer userInfo]];
