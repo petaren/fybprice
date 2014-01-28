@@ -25,6 +25,7 @@
 		D27593F218510A7800B714E5 /* PricesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593F118510A7800B714E5 /* PricesModel.m */; };
 		D28882AB18578E710019A92A /* facebook_profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D28882AA18578E710019A92A /* facebook_profile_pic.jpg */; };
 		D2A07999185B3D3D0038EC71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A07998185B3D3D0038EC71 /* QuartzCore.framework */; };
+		D2BCB43418980AF8001454D9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BCB43318980AF8001454D9 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D27593F118510A7800B714E5 /* PricesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricesModel.m; sourceTree = "<group>"; };
 		D28882AA18578E710019A92A /* facebook_profile_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facebook_profile_pic.jpg; sourceTree = "<group>"; };
 		D2A07998185B3D3D0038EC71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2BCB43318980AF8001454D9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2A07999185B3D3D0038EC71 /* QuartzCore.framework in Frameworks */,
+				D2BCB43418980AF8001454D9 /* Crashlytics.framework in Frameworks */,
 				D27593BE18510A3E00B714E5 /* CoreGraphics.framework in Frameworks */,
 				D27593C018510A3E00B714E5 /* UIKit.framework in Frameworks */,
 				D27593BC18510A3E00B714E5 /* Foundation.framework in Frameworks */,
@@ -112,6 +115,7 @@
 		D27593BA18510A3E00B714E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2BCB43318980AF8001454D9 /* Crashlytics.framework */,
 				D2A07998185B3D3D0038EC71 /* QuartzCore.framework */,
 				D27593BB18510A3E00B714E5 /* Foundation.framework */,
 				D27593BD18510A3E00B714E5 /* CoreGraphics.framework */,
@@ -195,6 +199,7 @@
 				D27593B418510A3E00B714E5 /* Sources */,
 				D27593B518510A3E00B714E5 /* Frameworks */,
 				D27593B618510A3E00B714E5 /* Resources */,
+				D2BCB43218980ABB001454D9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -281,6 +286,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D2BCB43218980ABB001454D9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 214d389f61b37ab7b33987b206e5d938ae031ee1";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D27593B418510A3E00B714E5 /* Sources */ = {
@@ -425,6 +446,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/petar/Develop/iOS/fybse,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybse/fybse-Info.plist";
@@ -442,6 +467,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/petar/Develop/iOS/fybse,
+				);
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
