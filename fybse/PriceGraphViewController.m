@@ -7,6 +7,7 @@
 //
 
 #import "PriceGraphViewController.h"
+#import "TimeFormatter.h"
 
 @interface PriceGraphViewController ()
 @property (nonatomic, strong) NSMutableDictionary *prices;
@@ -93,7 +94,7 @@
     NSDate *date = [dateFormatter dateFromString:self.prices[@"latest_date"]];
     self.prices[@"latest_date"] = date;
 
-    [self updateTimeSinceWithDate:date];
+    self.lastUpdateLabel.text = [TimeFormatter timeAgoSinceUpdate:date];
 
     self.timeSinceUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:30
                                                                  target:self
@@ -115,21 +116,7 @@
 
 -(void)timerFired:(NSTimer*)timer
 {
-    [self updateTimeSinceWithDate:[timer userInfo]];
+    self.lastUpdateLabel.text = [TimeFormatter timeAgoSinceUpdate:[timer userInfo]];
 }
-
--(void)updateTimeSinceWithDate:(NSDate*)referenceDate
-{
-    NSTimeInterval diff = abs([referenceDate timeIntervalSinceNow]);
-    if (diff < 3600) {
-        NSInteger minsDiff = diff/60;
-        self.lastUpdateLabel.text = [NSString stringWithFormat:@"%ld minutes ago", (long)minsDiff];
-    } else {
-        NSInteger hoursDiff = diff/60/60;
-        self.lastUpdateLabel.text = [NSString stringWithFormat:@"%ld hour ago", (long)hoursDiff];
-    }
-    NSLog(@"Updated time since to: %@", self.lastUpdateLabel.text);
-}
-
 
 @end
