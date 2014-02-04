@@ -15,10 +15,12 @@
     NSTimeInterval diff = abs([referenceDate timeIntervalSinceNow]);
     if (diff < 3600) {
         NSInteger minsDiff = diff/60;
-        return [NSString stringWithFormat:@"%ld minutes ago", (long)minsDiff];
+        NSString *plural = (minsDiff > 1) ? @"s" : @"";
+        return [NSString stringWithFormat:@"%ld minute%@ ago", (long)minsDiff, plural];
     } else {
         NSInteger hoursDiff = diff/60/60;
-        return [NSString stringWithFormat:@"%ld hour ago", (long)hoursDiff];
+        NSString *plural = (hoursDiff > 1) ? @"s" : @"";
+        return [NSString stringWithFormat:@"%ld hour%@ ago", (long)hoursDiff, plural];
     }
 }
 
