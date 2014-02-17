@@ -21,7 +21,7 @@
     NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:100 * 1024 diskCapacity:100 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:cache];
 
-    [Crashlytics startWithAPIKey:@"214d389f61b37ab7b33987b206e5d938ae031ee1"];
+    [Crashlytics startWithAPIKey:@"214d389f61b37ab7b33987b206e5d938ae031ee1" afterDelay:2.0];
     return YES;
 }
 							
