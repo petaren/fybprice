@@ -28,6 +28,9 @@
 		D2967090189AD81D0075EB63 /* TimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D296708F189AD81D0075EB63 /* TimeFormatter.m */; };
 		D2967092189AD8D80075EB63 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2967091189AD8D80075EB63 /* Crashlytics.framework */; };
 		D2A07999185B3D3D0038EC71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A07998185B3D3D0038EC71 /* QuartzCore.framework */; };
+		D2A138BC18B211DC00350ACE /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A138BB18B211DC00350ACE /* libFlurry_4.3.2.a */; };
+		D2A138BE18B2120500350ACE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A138BD18B2120500350ACE /* SystemConfiguration.framework */; };
+		D2A138C018B2122400350ACE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A138BF18B2122400350ACE /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,10 @@
 		D296708F189AD81D0075EB63 /* TimeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFormatter.m; sourceTree = "<group>"; };
 		D2967091189AD8D80075EB63 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D2A07998185B3D3D0038EC71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2A138BA18B211DC00350ACE /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		D2A138BB18B211DC00350ACE /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
+		D2A138BD18B2120500350ACE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D2A138BF18B2122400350ACE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +85,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A138C018B2122400350ACE /* Security.framework in Frameworks */,
+				D2A138BE18B2120500350ACE /* SystemConfiguration.framework in Frameworks */,
 				D2A07999185B3D3D0038EC71 /* QuartzCore.framework in Frameworks */,
 				D2967092189AD8D80075EB63 /* Crashlytics.framework in Frameworks */,
 				D27593BE18510A3E00B714E5 /* CoreGraphics.framework in Frameworks */,
 				D27593C018510A3E00B714E5 /* UIKit.framework in Frameworks */,
 				D27593BC18510A3E00B714E5 /* Foundation.framework in Frameworks */,
+				D2A138BC18B211DC00350ACE /* libFlurry_4.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +133,8 @@
 		D27593BA18510A3E00B714E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2A138BF18B2122400350ACE /* Security.framework */,
+				D2A138BD18B2120500350ACE /* SystemConfiguration.framework */,
 				D2967091189AD8D80075EB63 /* Crashlytics.framework */,
 				D2A07998185B3D3D0038EC71 /* QuartzCore.framework */,
 				D27593BB18510A3E00B714E5 /* Foundation.framework */,
@@ -137,6 +149,7 @@
 		D27593C118510A3E00B714E5 /* fybse */ = {
 			isa = PBXGroup;
 			children = (
+				D2A138B918B211DC00350ACE /* Flurry */,
 				D2A079A0185B41BD0038EC71 /* Resources */,
 				D27593F318510A8200B714E5 /* model */,
 				D27593CA18510A3E00B714E5 /* PriceGraphAppDelegate.h */,
@@ -198,6 +211,15 @@
 				D28882AA18578E710019A92A /* facebook_profile_pic.jpg */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		D2A138B918B211DC00350ACE /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				D2A138BA18B211DC00350ACE /* Flurry.h */,
+				D2A138BB18B211DC00350ACE /* libFlurry_4.3.2.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,6 +519,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybse/fybse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/petar/Dropbox/Develop/iOS/fybse/fybse/Flurry,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -519,6 +545,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybse/fybse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/petar/Dropbox/Develop/iOS/fybse/fybse/Flurry,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

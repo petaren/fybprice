@@ -9,6 +9,7 @@
 #import "PriceGraphAppDelegate.h"
 #import "PriceGraphViewController.h"
 #import <Crashlytics/Crashlytics.h>
+#import "Flurry.h"
 
 @implementation PriceGraphAppDelegate
 
@@ -16,6 +17,9 @@
 {
     // Override point for customization after application launch.
     NSLog(@"%s", __PRETTY_FUNCTION__);
+
+    [Flurry setCrashReportingEnabled:NO];
+    [Flurry startSession:@"ZDT9YFJBW4WFGKKPQX6H"];
 
 
     NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:100 * 1024 diskCapacity:100 * 1024 diskPath:nil];
