@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D2AC45B45648838313F8D0 /* libPods-fybseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C395767086D646A19048CA49 /* libPods-fybseTests.a */; };
 		D20899CE185760DD00E57E80 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20899CD185760DD00E57E80 /* InfoViewController.m */; };
 		D27593BC18510A3E00B714E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BB18510A3E00B714E5 /* Foundation.framework */; };
 		D27593BE18510A3E00B714E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27593BD18510A3E00B714E5 /* CoreGraphics.framework */; };
@@ -24,8 +25,12 @@
 		D27593E718510A3E00B714E5 /* fybseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593E618510A3E00B714E5 /* fybseTests.m */; };
 		D27593F218510A7800B714E5 /* PricesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D27593F118510A7800B714E5 /* PricesModel.m */; };
 		D28882AB18578E710019A92A /* facebook_profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D28882AA18578E710019A92A /* facebook_profile_pic.jpg */; };
+		D2967090189AD81D0075EB63 /* TimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D296708F189AD81D0075EB63 /* TimeFormatter.m */; };
+		D2967092189AD8D80075EB63 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2967091189AD8D80075EB63 /* Crashlytics.framework */; };
 		D2A07999185B3D3D0038EC71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A07998185B3D3D0038EC71 /* QuartzCore.framework */; };
-		D2BCB43418980AF8001454D9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BCB43318980AF8001454D9 /* Crashlytics.framework */; };
+		D2A138BC18B211DC00350ACE /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A138BB18B211DC00350ACE /* libFlurry_4.3.2.a */; };
+		D2A138BE18B2120500350ACE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A138BD18B2120500350ACE /* SystemConfiguration.framework */; };
+		D2A138C018B2122400350ACE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A138BF18B2122400350ACE /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C395767086D646A19048CA49 /* libPods-fybseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fybseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA1CB107DAB4C11BC175239 /* Pods-fybseTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fybseTests.xcconfig"; path = "Pods/Pods-fybseTests.xcconfig"; sourceTree = "<group>"; };
 		D20899CC185760DD00E57E80 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		D20899CD185760DD00E57E80 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		D27593B818510A3E00B714E5 /* fybse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fybse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,8 +70,14 @@
 		D27593F018510A7800B714E5 /* PricesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricesModel.h; sourceTree = "<group>"; };
 		D27593F118510A7800B714E5 /* PricesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricesModel.m; sourceTree = "<group>"; };
 		D28882AA18578E710019A92A /* facebook_profile_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facebook_profile_pic.jpg; sourceTree = "<group>"; };
+		D296708E189AD81D0075EB63 /* TimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFormatter.h; sourceTree = "<group>"; };
+		D296708F189AD81D0075EB63 /* TimeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFormatter.m; sourceTree = "<group>"; };
+		D2967091189AD8D80075EB63 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D2A07998185B3D3D0038EC71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D2BCB43318980AF8001454D9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		D2A138BA18B211DC00350ACE /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		D2A138BB18B211DC00350ACE /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
+		D2A138BD18B2120500350ACE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D2A138BF18B2122400350ACE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +85,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A138C018B2122400350ACE /* Security.framework in Frameworks */,
+				D2A138BE18B2120500350ACE /* SystemConfiguration.framework in Frameworks */,
 				D2A07999185B3D3D0038EC71 /* QuartzCore.framework in Frameworks */,
-				D2BCB43418980AF8001454D9 /* Crashlytics.framework in Frameworks */,
+				D2967092189AD8D80075EB63 /* Crashlytics.framework in Frameworks */,
 				D27593BE18510A3E00B714E5 /* CoreGraphics.framework in Frameworks */,
 				D27593C018510A3E00B714E5 /* UIKit.framework in Frameworks */,
 				D27593BC18510A3E00B714E5 /* Foundation.framework in Frameworks */,
+				D2A138BC18B211DC00350ACE /* libFlurry_4.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +103,7 @@
 				D27593DB18510A3E00B714E5 /* XCTest.framework in Frameworks */,
 				D27593DD18510A3E00B714E5 /* UIKit.framework in Frameworks */,
 				D27593DC18510A3E00B714E5 /* Foundation.framework in Frameworks */,
+				22D2AC45B45648838313F8D0 /* libPods-fybseTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +117,7 @@
 				D27593E018510A3E00B714E5 /* fybseTests */,
 				D27593BA18510A3E00B714E5 /* Frameworks */,
 				D27593B918510A3E00B714E5 /* Products */,
+				CBA1CB107DAB4C11BC175239 /* Pods-fybseTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,12 +133,15 @@
 		D27593BA18510A3E00B714E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D2BCB43318980AF8001454D9 /* Crashlytics.framework */,
+				D2A138BF18B2122400350ACE /* Security.framework */,
+				D2A138BD18B2120500350ACE /* SystemConfiguration.framework */,
+				D2967091189AD8D80075EB63 /* Crashlytics.framework */,
 				D2A07998185B3D3D0038EC71 /* QuartzCore.framework */,
 				D27593BB18510A3E00B714E5 /* Foundation.framework */,
 				D27593BD18510A3E00B714E5 /* CoreGraphics.framework */,
 				D27593BF18510A3E00B714E5 /* UIKit.framework */,
 				D27593DA18510A3E00B714E5 /* XCTest.framework */,
+				C395767086D646A19048CA49 /* libPods-fybseTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,6 +149,7 @@
 		D27593C118510A3E00B714E5 /* fybse */ = {
 			isa = PBXGroup;
 			children = (
+				D2A138B918B211DC00350ACE /* Flurry */,
 				D2A079A0185B41BD0038EC71 /* Resources */,
 				D27593F318510A8200B714E5 /* model */,
 				D27593CA18510A3E00B714E5 /* PriceGraphAppDelegate.h */,
@@ -137,6 +159,8 @@
 				D20899CD185760DD00E57E80 /* InfoViewController.m */,
 				D27593D018510A3E00B714E5 /* PriceGraphViewController.h */,
 				D27593D118510A3E00B714E5 /* PriceGraphViewController.m */,
+				D296708E189AD81D0075EB63 /* TimeFormatter.h */,
+				D296708F189AD81D0075EB63 /* TimeFormatter.m */,
 				D27593D318510A3E00B714E5 /* Images.xcassets */,
 				D27593C218510A3E00B714E5 /* Supporting Files */,
 			);
@@ -189,6 +213,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		D2A138B918B211DC00350ACE /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				D2A138BA18B211DC00350ACE /* Flurry.h */,
+				D2A138BB18B211DC00350ACE /* libFlurry_4.3.2.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D27593ED18510A3E00B714E5 /* Build configuration list for PBXNativeTarget "fybseTests" */;
 			buildPhases = (
+				D678A1F0E80A408CA572E0AB /* Check Pods Manifest.lock */,
 				D27593D518510A3E00B714E5 /* Sources */,
 				D27593D618510A3E00B714E5 /* Frameworks */,
 				D27593D718510A3E00B714E5 /* Resources */,
+				28A9B1BC001C4639AC03D1F4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +323,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		28A9B1BC001C4639AC03D1F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-fybseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D2BCB43218980ABB001454D9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +351,21 @@
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run 214d389f61b37ab7b33987b206e5d938ae031ee1";
 		};
+		D678A1F0E80A408CA572E0AB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -313,6 +378,7 @@
 				D27593CC18510A3E00B714E5 /* PriceGraphAppDelegate.m in Sources */,
 				D20899CE185760DD00E57E80 /* InfoViewController.m in Sources */,
 				D27593F218510A7800B714E5 /* PricesModel.m in Sources */,
+				D2967090189AD81D0075EB63 /* TimeFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,11 +514,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/petar/Develop/iOS/fybse,
+					/Users/petar/Dropbox/Develop/iOS/fybse,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybse/fybse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/petar/Dropbox/Develop/iOS/fybse/fybse/Flurry,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -469,12 +539,16 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/petar/Develop/iOS/fybse,
+					/Users/petar/Dropbox/Develop/iOS/fybse,
 				);
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybse/fybse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/petar/Dropbox/Develop/iOS/fybse/fybse/Flurry,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -483,6 +557,7 @@
 		};
 		D27593EE18510A3E00B714E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA1CB107DAB4C11BC175239 /* Pods-fybseTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fybse.app/fybse";
@@ -498,10 +573,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "fybseTests/fybseTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/petar/Develop/iOS/fybse/fybse/core\\ plot",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -510,6 +582,7 @@
 		};
 		D27593EF18510A3E00B714E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA1CB107DAB4C11BC175239 /* Pods-fybseTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fybse.app/fybse";
@@ -521,10 +594,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fybse/fybse-Prefix.pch";
 				INFOPLIST_FILE = "fybseTests/fybseTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/petar/Develop/iOS/fybse/fybse/core\\ plot",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
